@@ -1,0 +1,134 @@
+body {
+    background: #003E83;
+
+    font-family: futura pt;
+
+    background-image: linear-gradient(rgba(255,255,255,0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 2px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.insight, 
+.process-improvement,
+.application-development,
+.cloud {
+    /*  can be shortened with border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
+    border-top-left-radius: 371px 15px;
+    border-top-right-radius: 15px 405px;
+    border-bottom-right-radius: 315px 15px;
+    border-bottom-left-radius: 20px 365px;
+
+    border: solid 3px white;
+    width: 100%;
+    margin: 2rem 0;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: futura pt;
+    text-transform: uppercase;
+
+    // display: none;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-title {
+            color: white;
+            margin: 0;
+        }
+
+        &__container {
+            text-align: center;
+
+            &-items {
+                border-top-left-radius: 371px 15px;
+                border-top-right-radius: 15px 405px;
+                border-bottom-right-radius: 315px 15px;
+                border-bottom-left-radius: 20px 365px;
+
+                border: solid 3px white;
+
+                height: 100px;
+                width: 100px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.display {
+    width: 100%;
+    margin: 2rem 0;
+    // display: none;
+}
+
+.drawing {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        stroke: white;
+        width: 100%;
+    }
+}
+
+#content1 {
+    display: none;
+}
+
+#content2 {
+    display: none;
+}
+
+#content3 {
+    display: none;
+}
+
+#content4 {
+    display: none;
+}
+
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+    background: transparent;
+    cursor: pointer;
+}
+
+#btn1 {
+    // display: none;
+}
