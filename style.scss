@@ -94,6 +94,12 @@ body {
     // display: none;
 }
 
+.description {
+    color: white;
+    padding: 0 4rem 0 4rem;
+    font-size: 1.3rem;
+}
+
 .drawing {
     width: 50%;
     display: flex;
@@ -102,6 +108,17 @@ body {
     svg {
         stroke: white;
         width: 100%;
+    }
+
+        &-home {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        svg {
+            stroke: white;
+            width: 100%;
+        }
     }
 }
 
@@ -129,6 +146,14 @@ body {
     cursor: pointer;
 }
 
-#btn1 {
-    // display: none;
+#insightDrawing,
+#processDevelopmentDrawing,
+#brainDrawing {
+    display: none;
+}
+
+.drawing {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }

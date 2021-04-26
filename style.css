@@ -106,6 +106,12 @@ body {
   margin: 2rem 0;
 }
 
+.description {
+  color: white;
+  padding: 0 4rem 0 4rem;
+  font-size: 1.3rem;
+}
+
 .drawing {
   width: 50%;
   display: -webkit-box;
@@ -120,6 +126,24 @@ body {
 }
 
 .drawing svg {
+  stroke: white;
+  width: 100%;
+}
+
+.drawing-home {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.drawing-home svg {
   stroke: white;
   width: 100%;
 }
@@ -146,5 +170,24 @@ body {
 #btn4 {
   background: transparent;
   cursor: pointer;
+}
+
+#insightDrawing,
+#processDevelopmentDrawing,
+#brainDrawing {
+  display: none;
+}
+
+.drawing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

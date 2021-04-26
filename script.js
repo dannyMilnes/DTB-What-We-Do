@@ -8,6 +8,11 @@ var btn2 = document.getElementById("btn2");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
 
+var homeDrawing = document.getElementById("homeDrawing");
+var insightDrawing = document.getElementById("insightDrawing");
+var processDevelopmentDrawing = document.getElementById("processDevelopmentDrawing");
+var brainDrawing = document.getElementById("brainDrawing");
+
 function openInsignt() {
     btn1.style.display="none"
     btn2.style.display="block"
@@ -18,6 +23,11 @@ function openInsignt() {
     content2.style.display="none";
     content3.style.display="none";
     content4.style.display="none";
+
+    homeDrawing.style.display="none";
+    insightDrawing.style.display="block";
+    processDevelopmentDrawing.style.display="none";
+    brainDrawing.style.display="none";
 }
 
 function processImprovement() {
@@ -30,6 +40,11 @@ function processImprovement() {
     content2.style.display="block";
     content3.style.display="none";
     content4.style.display="none";
+
+    homeDrawing.style.display = "none";
+    insightDrawing.style.display = "none";
+    processDevelopmentDrawing.style.display = "block";
+    brainDrawing.style.display = "none";
 }
 
 function applicationDevelopment() {
@@ -42,6 +57,11 @@ function applicationDevelopment() {
     content2.style.display="none";
     content3.style.display="block";
     content4.style.display="none";
+
+    homeDrawing.style.display = "none";
+    insightDrawing.style.display = "none";
+    processDevelopmentDrawing.style.display = "none";
+    brainDrawing.style.display = "none";
 }
 
 function cloud() {
@@ -54,4 +74,9 @@ function cloud() {
     content2.style.display="none";
     content3.style.display="none";
     content4.style.display="block";
+
+    homeDrawing.style.display = "none";
+    insightDrawing.style.display = "none";
+    processDevelopmentDrawing.style.display = "none";
+    brainDrawing.style.display = "block";
 }
