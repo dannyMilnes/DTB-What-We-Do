@@ -38,7 +38,12 @@ body {
     font-family: futura pt;
     text-transform: uppercase;
 
-    // display: none;
+    &:nth-child(1) {
+        border-top-left-radius: 15px 405px;
+        border-top-right-radius: 371px 15px;
+        border-bottom-right-radius: 20px 365px;
+        border-bottom-left-radius: 315px 15px;
+    }
 }
 
 .content {
@@ -96,8 +101,16 @@ body {
 
 .description {
     color: white;
-    padding: 0 4rem 0 4rem;
+    padding: 0 4rem;
     font-size: 1.3rem;
+
+    &-title {
+        color: white;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 2rem;
+        padding: 0 4rem;
+    }
 }
 
 .drawing {
@@ -147,8 +160,9 @@ body {
 }
 
 #insightDrawing,
-#processDevelopmentDrawing,
-#brainDrawing {
+#processImprovementDrawing,
+#cloudDrawing,
+#applicationDevelopmentDrawing {
     display: none;
 }
 

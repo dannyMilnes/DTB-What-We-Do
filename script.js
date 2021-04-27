@@ -10,8 +10,9 @@ var btn4 = document.getElementById("btn4");
 
 var homeDrawing = document.getElementById("homeDrawing");
 var insightDrawing = document.getElementById("insightDrawing");
-var processDevelopmentDrawing = document.getElementById("processDevelopmentDrawing");
-var brainDrawing = document.getElementById("brainDrawing");
+var processImprovementDrawing = document.getElementById("processImprovementDrawing");
+var cloudDrawing = document.getElementById("cloudDrawing");
+var applicationDevelopmentDrawing = document.getElementById("applicationDevelopmentDrawing");
 
 function openInsignt() {
     btn1.style.display="none"
@@ -26,8 +27,9 @@ function openInsignt() {
 
     homeDrawing.style.display="none";
     insightDrawing.style.display="block";
-    processDevelopmentDrawing.style.display="none";
-    brainDrawing.style.display="none";
+    processImprovementDrawing.style.display="none";
+    cloudDrawing.style.display="none";
+    applicationDevelopmentDrawing.style.display = "none";
 }
 
 function processImprovement() {
@@ -43,8 +45,9 @@ function processImprovement() {
 
     homeDrawing.style.display = "none";
     insightDrawing.style.display = "none";
-    processDevelopmentDrawing.style.display = "block";
-    brainDrawing.style.display = "none";
+    processImprovementDrawing.style.display = "block";
+    cloudDrawing.style.display = "none";
+    applicationDevelopmentDrawing.style.display = "none";
 }
 
 function applicationDevelopment() {
@@ -60,8 +63,9 @@ function applicationDevelopment() {
 
     homeDrawing.style.display = "none";
     insightDrawing.style.display = "none";
-    processDevelopmentDrawing.style.display = "none";
-    brainDrawing.style.display = "none";
+    processImprovementDrawing.style.display = "none";
+    cloudDrawing.style.display = "none";
+    applicationDevelopmentDrawing.style.display = "block";
 }
 
 function cloud() {
@@ -77,6 +81,7 @@ function cloud() {
 
     homeDrawing.style.display = "none";
     insightDrawing.style.display = "none";
-    processDevelopmentDrawing.style.display = "none";
-    brainDrawing.style.display = "block";
+    processImprovementDrawing.style.display = "none";
+    cloudDrawing.style.display = "block";
+    applicationDevelopmentDrawing.style.display = "none";
 }
