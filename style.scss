@@ -17,6 +17,10 @@ body {
     text-align: center;
     font-size: 2rem;
     margin-top: 5rem;
+
+    @media (max-width: 1100px) {
+        margin-top: 2rem;
+    }
 }
 
 .insight, 
@@ -38,11 +42,8 @@ body {
     font-family: futura pt;
     text-transform: uppercase;
 
-    &:nth-child(1) {
-        border-top-left-radius: 15px 405px;
-        border-top-right-radius: 371px 15px;
-        border-bottom-right-radius: 20px 365px;
-        border-bottom-left-radius: 315px 15px;
+    @media (max-width: 1100px) {
+        font-size: 1rem;
     }
 }
 
@@ -52,6 +53,10 @@ body {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+    }
 }
 
 .section {
@@ -61,6 +66,10 @@ body {
     justify-content: center;
     flex-direction: column;
 
+    @media (max-width: 1100px) {
+        width: 100%;
+    }
+
     &-icons {
         display: flex;
         flex-direction: row;
@@ -69,10 +78,17 @@ body {
         &-title {
             color: white;
             margin: 0;
+            
+            @media (max-width: 1100px) {
+                font-size: 0.8rem;
+            }
         }
 
         &__container {
             text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
 
             &-items {
                 border-top-left-radius: 371px 15px;
@@ -88,6 +104,16 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @media (max-width: 650px) {
+                    height: 50px;
+                    width: 50px;
+
+                    svg {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
             }
         }
     }
@@ -104,12 +130,23 @@ body {
     padding: 0 4rem;
     font-size: 1.3rem;
 
+    @media (max-width: 1100px) {
+        padding: 0 0.7rem;
+        font-size: 1rem;
+    }
+
     &-title {
         color: white;
         text-transform: uppercase;
         text-align: left;
         font-size: 2rem;
         padding: 0 4rem;
+
+        @media (max-width: 1100px) {
+            padding: 0 0.7rem;
+            margin: 0.7rem 0;
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -118,8 +155,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     svg {
         stroke: white;
+        width: 100%;
+    }
+
+    @media (max-width: 1100px) {
         width: 100%;
     }
 
@@ -128,6 +170,11 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media (max-width: 1100px) {
+                width: 100%;
+            }
+
         svg {
             stroke: white;
             width: 100%;
@@ -135,18 +182,9 @@ body {
     }
 }
 
-#content1 {
-    display: none;
-}
-
-#content2 {
-    display: none;
-}
-
-#content3 {
-    display: none;
-}
-
+#content1,
+#content2,
+#content3, 
 #content4 {
     display: none;
 }
@@ -157,6 +195,27 @@ body {
 #btn4 {
     background: transparent;
     cursor: pointer;
+
+    @media (max-width: 1100px) {
+        margin: 0.7rem 0;
+    }
+}
+
+.insight {
+    animation: fade-in 1s;
+    animation-delay: 0.1s;
+}
+.process-improvement {
+    animation: fade-in 1s;
+    animation-delay: 0.2s;
+}
+.application-development {
+    animation: fade-in 1s;
+    animation-delay: 0.3s;
+}
+.cloud {
+    animation: fade-in 1s;
+    animation-delay: 0.4s;
 }
 
 #insightDrawing,
@@ -170,4 +229,15 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }

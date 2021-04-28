@@ -14,6 +14,12 @@ body {
   margin-top: 5rem;
 }
 
+@media (max-width: 1100px) {
+  .title {
+    margin-top: 2rem;
+  }
+}
+
 .insight,
 .process-improvement,
 .application-development,
@@ -33,14 +39,13 @@ body {
   text-transform: uppercase;
 }
 
-.insight:nth-child(1),
-.process-improvement:nth-child(1),
-.application-development:nth-child(1),
-.cloud:nth-child(1) {
-  border-top-left-radius: 15px 405px;
-  border-top-right-radius: 371px 15px;
-  border-bottom-right-radius: 20px 365px;
-  border-bottom-left-radius: 315px 15px;
+@media (max-width: 1100px) {
+  .insight,
+  .process-improvement,
+  .application-development,
+  .cloud {
+    font-size: 1rem;
+  }
 }
 
 .content {
@@ -51,6 +56,15 @@ body {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .section {
@@ -68,6 +82,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 1100px) {
+  .section {
+    width: 100%;
+  }
 }
 
 .section-icons {
@@ -88,8 +108,24 @@ body {
   margin: 0;
 }
 
+@media (max-width: 1100px) {
+  .section-icons-title {
+    font-size: 0.8rem;
+  }
+}
+
 .section-icons__container {
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section-icons__container-items {
@@ -111,6 +147,17 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 650px) {
+  .section-icons__container-items {
+    height: 50px;
+    width: 50px;
+  }
+  .section-icons__container-items svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 .display {
   width: 100%;
   margin: 2rem 0;
@@ -122,12 +169,27 @@ body {
   font-size: 1.3rem;
 }
 
+@media (max-width: 1100px) {
+  .description {
+    padding: 0 0.7rem;
+    font-size: 1rem;
+  }
+}
+
 .description-title {
   color: white;
   text-transform: uppercase;
   text-align: left;
   font-size: 2rem;
   padding: 0 4rem;
+}
+
+@media (max-width: 1100px) {
+  .description-title {
+    padding: 0 0.7rem;
+    margin: 0.7rem 0;
+    font-size: 1.5rem;
+  }
 }
 
 .drawing {
@@ -148,6 +210,12 @@ body {
   width: 100%;
 }
 
+@media (max-width: 1100px) {
+  .drawing {
+    width: 100%;
+  }
+}
+
 .drawing-home {
   width: 50%;
   display: -webkit-box;
@@ -161,23 +229,20 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 1100px) {
+  .drawing-home {
+    width: 100%;
+  }
+}
+
 .drawing-home svg {
   stroke: white;
   width: 100%;
 }
 
-#content1 {
-  display: none;
-}
-
-#content2 {
-  display: none;
-}
-
-#content3 {
-  display: none;
-}
-
+#content1,
+#content2,
+#content3,
 #content4 {
   display: none;
 }
@@ -188,6 +253,43 @@ body {
 #btn4 {
   background: transparent;
   cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  #btn1,
+  #btn2,
+  #btn3,
+  #btn4 {
+    margin: 0.7rem 0;
+  }
+}
+
+.insight {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.process-improvement {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.application-development {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.cloud {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 #insightDrawing,
@@ -208,5 +310,31 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
