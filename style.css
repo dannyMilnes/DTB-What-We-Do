@@ -205,9 +205,9 @@ body {
           justify-content: center;
 }
 
-.drawing svg {
-  stroke: white;
+.drawing-image {
   width: 100%;
+  padding: 0 4rem;
 }
 
 @media (max-width: 1100px) {
@@ -221,12 +221,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 1100px) {
@@ -245,6 +246,10 @@ body {
 #content3,
 #content4 {
   display: none;
+}
+
+#content1 {
+  margin-top: 0;
 }
 
 #btn1,
@@ -271,27 +276,6 @@ body {
           animation-delay: 0.1s;
 }
 
-.process-improvement {
-  -webkit-animation: fade-in 1s;
-          animation: fade-in 1s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.application-development {
-  -webkit-animation: fade-in 1s;
-          animation: fade-in 1s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.cloud {
-  -webkit-animation: fade-in 1s;
-          animation: fade-in 1s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
 #insightDrawing,
 #processImprovementDrawing,
 #cloudDrawing,
@@ -312,29 +296,98 @@ body {
           flex-direction: column;
 }
 
-@-webkit-keyframes fade-in {
+.fade {
+  width: 200px;
+  height: 200px;
+  background: red;
+  opacity: 0;
+}
+
+.elementToFadeOut {
+  -webkit-animation: slideOut 500ms ease;
+          animation: slideOut 500ms ease;
+}
+
+@-webkit-keyframes slideOut {
   0% {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+
+#insightDrawing,
+#processImprovementDrawing,
+#applicationDevelopmentDrawing,
+#cloudDrawing {
+  height: 80vh;
+}
+
+.section-icons {
+  -webkit-animation: fadein 500ms ease;
+          animation: fadein 500ms ease;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    width: 50%;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    width: 100%;
     opacity: 1;
   }
 }
 
-@keyframes fade-in {
+@keyframes fadeIn {
   0% {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
+    width: 50%;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    width: 100%;
     opacity: 1;
   }
+}
+
+.wwd-category {
+  border-top-left-radius: 371px 15px;
+  border-top-right-radius: 15px 405px;
+  border-bottom-right-radius: 315px 15px;
+  border-bottom-left-radius: 20px 365px;
+  border: solid 3px white;
+  width: 100%;
+  margin: 2rem 0;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: futura pt;
+  text-transform: uppercase;
+}
+
+.wwd-category__title {
+  background: none;
+}
+
+.wwd-category__content {
+  display: none;
+}
+
+.wwd-category__content.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

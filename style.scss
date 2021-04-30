@@ -156,9 +156,9 @@ body {
     align-items: center;
     justify-content: center;
 
-    svg {
-        stroke: white;
+    &-image {
         width: 100%;
+        padding: 0 4rem
     }
 
     @media (max-width: 1100px) {
@@ -168,8 +168,8 @@ body {
         &-home {
             width: 50%;
             display: flex;
-            align-items: center;
             justify-content: center;
+            flex-direction: column;
 
             @media (max-width: 1100px) {
                 width: 100%;
@@ -189,6 +189,10 @@ body {
     display: none;
 }
 
+#content1 {
+    margin-top: 0;
+}
+
 #btn1,
 #btn2,
 #btn3,
@@ -205,18 +209,18 @@ body {
     animation: fade-in 1s;
     animation-delay: 0.1s;
 }
-.process-improvement {
-    animation: fade-in 1s;
-    animation-delay: 0.2s;
-}
-.application-development {
-    animation: fade-in 1s;
-    animation-delay: 0.3s;
-}
-.cloud {
-    animation: fade-in 1s;
-    animation-delay: 0.4s;
-}
+// .process-improvement {
+//     animation: fade-in 1s;
+//     animation-delay: 0.2s;
+// }
+// .application-development {
+//     animation: fade-in 1s;
+//     animation-delay: 0.3s;
+// }
+// .cloud {
+//     animation: fade-in 1s;
+//     animation-delay: 0.4s;
+// }
 
 #insightDrawing,
 #processImprovementDrawing,
@@ -231,13 +235,77 @@ body {
     flex-direction: column;
 }
 
-@keyframes fade-in {
-  0% {
-    transform: translateY(-150px);
-    opacity: 0
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+.fade{
+    width:200px;
+    height: 200px;
+    background: red;
+    opacity:0;
+}
+
+.elementToFadeOut {
+    animation: slideOut 500ms ease;
+}
+
+@keyframes slideOut {
+    0% { 
+        // transform: translateX(0px);
+        opacity: 1;
+    }
+    100% { 
+        transform: translateX(-500px);
+        opacity: 0;
+    } 
+}
+
+#insightDrawing,
+#processImprovementDrawing,
+#applicationDevelopmentDrawing,
+#cloudDrawing {
+    height: 80vh;
+}
+
+.section-icons {
+    animation: fadein 500ms ease
+}
+
+@keyframes fadeIn {
+    0% { 
+        width: 50%;
+        opacity: 0;
+    }
+    100% { 
+        width: 100%;
+        opacity: 1;
+    } 
+}
+
+.wwd {
+
+    &-category{
+        border-top-left-radius: 371px 15px;
+        border-top-right-radius: 15px 405px;
+        border-bottom-right-radius: 315px 15px;
+        border-bottom-left-radius: 20px 365px;
+
+        border: solid 3px white;
+        width: 100%;
+        margin: 2rem 0;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: futura pt;
+        text-transform: uppercase;
+
+        &__title {
+            background: none;
+        }
+
+        &__content {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
 }

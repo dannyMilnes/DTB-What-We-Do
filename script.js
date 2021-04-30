@@ -1,87 +1,73 @@
-var content1 = document.getElementById("content1");
-var content2 = document.getElementById("content2");
-var content3 = document.getElementById("content3");
-var content4 = document.getElementById("content4");
+var $categoryTitles = document.getElementsByClassName('js-wwd-category-title');
+var $categoryContents = document.getElementsByClassName('js-wwd-category-content');
 
-var btn1 = document.getElementById("btn1");
-var btn2 = document.getElementById("btn2");
-var btn3 = document.getElementById("btn3");
-var btn4 = document.getElementById("btn4");
+console.log($categoryTitles);
 
-var homeDrawing = document.getElementById("homeDrawing");
-var insightDrawing = document.getElementById("insightDrawing");
-var processImprovementDrawing = document.getElementById("processImprovementDrawing");
-var cloudDrawing = document.getElementById("cloudDrawing");
-var applicationDevelopmentDrawing = document.getElementById("applicationDevelopmentDrawing");
-
-function openInsignt() {
-    btn1.style.display="none"
-    btn2.style.display="block"
-    btn3.style.display="block"
-    btn4.style.display="block"
-
-    content1.style.display="block";
-    content2.style.display="none";
-    content3.style.display="none";
-    content4.style.display="none";
-
-    homeDrawing.style.display="none";
-    insightDrawing.style.display="block";
-    processImprovementDrawing.style.display="none";
-    cloudDrawing.style.display="none";
-    applicationDevelopmentDrawing.style.display = "none";
+for (var element of $categoryTitles) {
+    initCategoryTitlesListener(element);
 }
 
-function processImprovement() {
-    btn1.style.display = "block"
-    btn2.style.display = "none"
-    btn3.style.display = "block"
-    btn4.style.display = "block"
-
-    content1.style.display="none";
-    content2.style.display="block";
-    content3.style.display="none";
-    content4.style.display="none";
-
-    homeDrawing.style.display = "none";
-    insightDrawing.style.display = "none";
-    processImprovementDrawing.style.display = "block";
-    cloudDrawing.style.display = "none";
-    applicationDevelopmentDrawing.style.display = "none";
+function initCategoryTitlesListener(element){
+    element.addEventListener('click', function(event) {
+        toggleCategory(event);
+    });
 }
 
-function applicationDevelopment() {
-    btn1.style.display = "block"
-    btn2.style.display = "block"
-    btn3.style.display = "none"
-    btn4.style.display = "block"
+function toggleCategory(event) {
+    var nextCategoryContent = event.target.nextElementSibling;
 
-    content1.style.display="none";
-    content2.style.display="none";
-    content3.style.display="block";
-    content4.style.display="none";
-
-    homeDrawing.style.display = "none";
-    insightDrawing.style.display = "none";
-    processImprovementDrawing.style.display = "none";
-    cloudDrawing.style.display = "none";
-    applicationDevelopmentDrawing.style.display = "block";
+    if (nextCategoryContent.classList.contains('show')) {
+        nextCategoryContent.classList.remove('show');
+    } else {
+        // hide all category content
+        for (var element of $categoryContents) {
+            element.classList.remove('show');
+        }
+        // show nearest category content
+        nextCategoryContent.classList.add('show');
+    }
 }
 
-function cloud() {
-    btn1.style.display = "block"
-    btn2.style.display = "block"
-    btn3.style.display = "block"
-    btn4.style.display = "none"
 
-    content1.style.display="none";
-    content2.style.display="none";
-    content3.style.display="none";
-    content4.style.display="block";
 
-    homeDrawing.style.display = "none";
-    insightDrawing.style.display = "none";
-    processImprovementDrawing.style.display = "none";
-    cloudDrawing.style.display = "block";
-    applicationDevelopmentDrawing.style.display = "none";
-}
+// var fruits = ["apple", "orange", "cherry"];
+// fruits.forEach(myFunction);
+
+// function myFunction(item, index) {
+//     document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
+// }
+
+
+
+
+
+
+
+// var insightDiv = document.querySelector(".insight");
+// var insightBtn = document.querySelector(".insight");
+// insightBtn.addEventListener("click", function () {
+//     insightDiv.classList.add("elementToFadeOut");
+//     setTimeout(function () { insightDiv.classList.remove("elementToFadeOut"); }, 500);
+// });
+
+// var piDiv = document.querySelector(".process-improvement");
+// var piBtn = document.querySelector(".process-improvement");
+// piBtn.addEventListener("click", function () {
+//     piDiv.classList.add("elementToFadeOut");
+//     setTimeout(function () { piDiv.classList.remove("elementToFadeOut"); }, 500);
+// });
+
+// var adDiv = document.querySelector(".application-development");
+// var adBtn = document.querySelector(".application-development");
+// adBtn.addEventListener("click", function () {
+//     adDiv.classList.add("elementToFadeOut");
+//     setTimeout(function () { adDiv.classList.remove("elementToFadeOut"); }, 500);
+// });
+
+// var cloudDiv = document.querySelector(".cloud");
+// var cloudBtn = document.querySelector(".cloud");
+// cloudBtn.addEventListener("click", function () {
+//     cloudDiv.classList.add("elementToFadeOut");
+//     setTimeout(function () { cloudDiv.classList.remove("elementToFadeOut"); }, 500);
+// });
+
