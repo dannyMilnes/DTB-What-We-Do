@@ -1,7 +1,7 @@
 var $categoryTitles = document.getElementsByClassName('js-wwd-category-title');
 var $categoryContents = document.getElementsByClassName('js-wwd-category-content');
 
-console.log($categoryTitles);
+// console.log($categoryTitles);
 
 for (var element of $categoryTitles) {
     initCategoryTitlesListener(element);
@@ -27,20 +27,6 @@ function toggleCategory(event) {
         nextCategoryContent.classList.add('show');
     }
 }
-
-
-
-// var fruits = ["apple", "orange", "cherry"];
-// fruits.forEach(myFunction);
-
-// function myFunction(item, index) {
-//     document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
-// }
-
-
-
-
-
 
 
 // var insightDiv = document.querySelector(".insight");
