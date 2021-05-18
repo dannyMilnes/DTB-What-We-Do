@@ -28,9 +28,25 @@
 //     }
 // }
 
-$(document).ready(function () {
-    $('.wwd-category').click(function () {
-        $(this).find('.js-wwd-category-content').slideToggle(100);
-    });
+// $(document).ready(function () {
+//     $('.js-wwd-category').click(function () {
+//         $(this).find('.js-wwd-category-content').slideToggle(100);
+//     });
+// });
+
+$('.js-wwd-category-title').click(function (e) {
+    e.preventDefault();
+
+    let $this = $(this);
+
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(200);
+    } else {
+        $this.parent().parent().find('.js-wwd-category-content').removeClass('show');
+        $this.parent().parent().find('.js-wwd-category-content').slideUp(200);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(200);
+    }
 });
 
