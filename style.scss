@@ -29,7 +29,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     font-size: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 
     @media (max-width: 1100px) {
         margin-top: 2rem;
@@ -50,7 +50,7 @@ body {
     &-icons {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
 
         &-title {
@@ -155,7 +155,12 @@ body {
         font-family: futura pt;
         text-transform: uppercase;
 
-        animation: slideIn 500ms;
+        @media (max-width: 1100px) {
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        // animation: slideIn 500ms;
 
         &__content {
             padding: 1rem;
@@ -196,6 +201,12 @@ body {
             }
         }
     }
+}
+
+.dtb-logo {
+    display: flex;
+    margin: auto;
+    height: 60px;
 }
 
 @keyframes dropDownBounce {
