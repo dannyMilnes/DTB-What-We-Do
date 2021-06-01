@@ -22,6 +22,7 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 .title {
@@ -34,6 +35,27 @@ body {
     @media (max-width: 1100px) {
         margin-top: 2rem;
     }
+}
+
+.right-content {
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+     @media (max-width: 1100px) {
+         display: none;
+     }
+
+     &__body {
+        animation: fadeIn 320ms linear;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+     }
 }
 
 .section {
@@ -150,7 +172,7 @@ body {
         width: 100%;
         margin: 2rem 0;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
         font-family: futura pt;
         text-transform: uppercase;
@@ -181,6 +203,7 @@ body {
                     padding-right: 5%;
                     transform: translate(0%,-50%);
                     animation: fadeIn 320ms linear;
+                    display: none;
                 }
             }
 
